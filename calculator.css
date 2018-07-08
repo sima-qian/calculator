@@ -3,18 +3,37 @@ body {
 }
 #table {
   background-color: black;
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+  max-width: 16rem;
+  max-height: 20rem;
 }
 #screen {
   box-sizing: border-box;
   border: solid;
   border-width: thin;
-  max-width: 12rem;
-  height: 4rem;
   padding: 0.5rem;
   background-color: white;
   text-align: right;
   font-size: 2rem;
   font-weight: bold;
+  grid-column: 1 / 5;
+}
+#clear {
+  grid-column: 1 / 3;
+}
+#equals {
+  grid-row: 5 / 7;
+  grid-column: 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[id="0"] {
+  grid-column: 1 / 3;
 }
 .button {
   float: left;
@@ -22,21 +41,15 @@ body {
   border: solid;
   border-width: thin;
   border-color: black;
-  margin-top: -0.1rem;
-  width: 4rem;
-  height: 3rem;
   padding: 0.5rem;
   background-color: grey;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   border-color: white;
-}
-#punkt {
-  margin-top: -3.1rem;
-  position: absolute;
-  margin-left: 8rem;
 }
